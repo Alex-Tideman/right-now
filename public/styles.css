@@ -1,0 +1,8 @@
+.messages h3,p{
+  display: inline;
+  padding: 2px;
+}
+
+.message-title {
+  color: green;
+}
