@@ -12,21 +12,20 @@ app.get('/', function (req, res){
 });
 
 io.on('connection', function (socket) {
-  socket.emit('on connect', {userCount: io.engine.clientsCount})
-
-  var interval = setInterval(function () {
-    socket.emit('chat', {user: 'turingbot', text: 'I am a banana.'});
-  }, 1000);
+  io.sockets.emit('on connect', {userCount: io.engine.clientsCount})
 
   socket.on('message', function (channel, message) {
-    if(channel === 'mission') {
-      console.log(channel + ':', message);
+    if(channel === 'user joined') {
+      io.sockets.emit('user joined', message)
+    } else {
+      io.sockets.emit('chat', message)
     }
   });
 
-  socket.on('disconnect', function () {
-    clearInterval(interval);
-  });
+  socket.on('disconnect', function (channel, message) {
+    io.sockets.emit('user left', {text: 'someone left the chat'})
+    io.sockets.emit('on connect', {userCount: io.engine.clientsCount})
+  })
 });
 
 http.listen(process.env.PORT || 3000, function(){
