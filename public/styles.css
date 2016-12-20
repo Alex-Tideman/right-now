@@ -3,19 +3,25 @@ body {
   margin: 0;
 }
 #header {
-  padding-top: 2vh;
-  height: 8vh;
+  padding-top: 1vh;
+  height: 10vh;
   width: 100vw;
   background: #FACE0F;
 }
 
-#header h1{
-  display: inline;
+#header iframe{
   padding-left: 20px;
+}
+
+#header span{
+  font-size: 32px;
+  font-weight: 900;
+  margin-left: 20px;
 }
 
 #header h3{
   display: inline;
+  padding-top: 20px;
   padding-right: 20px;
 }
 
@@ -48,15 +54,29 @@ body {
 #user-input {
   width: 15vw;
   height: 5vh;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
 }
+
+#user-input:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+
 
 #message-input {
-  width: 15vw;
+  width: 25vw;
   height: 5vh;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
 }
 
-#send-message {
-
+#message-input:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
 }
 
 .messages h3,p{
@@ -69,8 +89,20 @@ body {
 }
 
 
-#set-user {
-
+#set-user, #send-message {
+  -moz-box-shadow: inset 0px 1px 0px 0px #FACE0F;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #FACE0F;
+  box-shadow: inset 0px 1px 0px 0px #FACE0F;
+  background-color: #FACE0F;
+  border: 1px solid #FACE0F;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .user-joined-title {
