@@ -5,7 +5,7 @@ $(document).ready(() => {
   $('#send-message').hide()
 })
 socket.on('on connect', function (message) {
-  $('.user-count').html(`<p>Users connected: ${message.userCount}</p>`)
+  $('#user-count').html(`<p>Users connected: ${message.userCount}</p>`)
 });
 
 $('#set-user').on('click', function() {

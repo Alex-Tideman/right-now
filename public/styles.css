@@ -1,12 +1,79 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#header {
+  padding-top: 2vh;
+  height: 8vh;
+  width: 100vw;
+  background: #FACE0F;
+}
+
+#header h1{
+  display: inline;
+  padding-left: 20px;
+}
+
+#header h3{
+  display: inline;
+  padding-right: 20px;
+}
+
+.container {
+  display: flex;
+  flex: 2;
+}
+
+#side {
+  width: 30%;
+  height: auto;
+  min-height: 90vh;
+  padding: 20px;
+  background: #0D355A;
+}
+
+#main {
+  width: 70%;
+  height: auto;
+  min-height: 90vh;
+  padding: 20px;
+  background: #C0D3C5;
+}
+
+#user-count {
+  float: right;
+  margin-top: 0;
+}
+
+#user-input {
+  width: 15vw;
+  height: 5vh;
+}
+
+#message-input {
+  width: 15vw;
+  height: 5vh;
+}
+
+#send-message {
+
+}
+
 .messages h3,p{
   display: inline;
   padding: 2px;
 }
 
 .message-title {
-  color: green;
+  color: #0D355A;
+}
+
+
+#set-user {
+
 }
 
 .user-joined-title {
-  color: red;
+  color: #FACE0F;
+  text-shadow: #0D355A 1px 2px 3px;
 }

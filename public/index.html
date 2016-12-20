@@ -5,9 +5,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-
-    <h1>Right Now</h1>
-
     <!--
     Right now,
     Hey, it's your tomorrow
@@ -18,16 +15,25 @@
     Right here and now
     It means everything
     -->
-    <h3 class="user-count"></h3>
-
-    <input type="text" id="user-input" placeholder="who are ya"/>
-    <button id="set-user">Join Chat</button>
-
-    <input type="text" id="message-input" placeholder="say something"/>
-    <button id="send-message">Send Message</button>
-
-    <section class="messages">
+    <section id="header">
+      <h1>Right Now</h1>
+      <h3 id="user-count"></h3>
     </section>
+
+    <div class="container">
+      <section id="side">
+        <input type="text" id="user-input" placeholder="who are ya"/>
+        <button id="set-user">Join Chat</button>
+
+        <input type="text" id="message-input" placeholder="say something"/>
+        <button id="send-message">Send Message</button>
+      </section>
+      <section id="main">
+        <section class="messages">
+        </section>
+      </section>  
+    </div>
+
 
     <script src="/jquery.js"></script>
     <script src="/socket.io/socket.io.js"></script>
